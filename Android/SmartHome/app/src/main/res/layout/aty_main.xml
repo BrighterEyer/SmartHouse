@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#7C7C7C"
+    tools:context=".Activity.Aty_Mian">
+
+    <include layout="@layout/toolbar" />
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="15dp"
+        app:cardBackgroundColor="#E3BB88"
+        app:contentPadding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.hanks.htextview.evaporate.EvaporateTextView
+                android:id="@+id/etv_tem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="23"
+                android:textColor="#fff"
+                android:textSize="60sp" />
+            <TextView
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/etv_tem"
+                android:text="°C"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+            <TextView
+                android:padding="10sp"
+                android:textSize="20sp"
+                android:layout_below="@+id/etv_tem"
+                android:textColor="#fff"
+                android:text="2019-6-2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="100dp"
+                android:src="@drawable/temperature"
+                android:scaleType="centerInside"
+                android:layout_height="100dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        app:cardBackgroundColor="#DB9864"
+        app:contentPadding="10dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.hanks.htextview.evaporate.EvaporateTextView
+                android:textColor="#fff"
+                android:id="@+id/etv_wet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="23"
+                android:textSize="60sp"/>
+            <TextView
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/etv_wet"
+                android:text="%"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etv_wet"
+                android:padding="10sp"
+                android:text="2019-6-2"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="100dp"
+                android:src="@drawable/wet"
+                android:scaleType="centerInside"
+                android:layout_height="100dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+
+        app:cardBackgroundColor="#B1695A"
+        app:contentPadding="10dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.hanks.htextview.evaporate.EvaporateTextView
+                android:textColor="#fff"
+                android:id="@+id/etv_smog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="23"
+                android:textSize="60sp"/>
+            <TextView
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/etv_smog"
+                android:text="°C"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+            <TextView
+                android:padding="10sp"
+                android:textSize="20sp"
+                android:layout_below="@+id/etv_smog"
+                android:textColor="#fff"
+                android:text="2019-6-2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="100dp"
+                android:src="@drawable/smog"
+                android:scaleType="centerInside"
+                android:layout_height="100dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <!--<android.support.v7.widget.CardView-->
+        <!--app:cardBackgroundColor="#644749"-->
+        <!--app:contentPadding="10dp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:padding="10dp"-->
+        <!--app:cardCornerRadius="20dp"-->
+        <!--app:cardElevation="20dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+       <!--<RelativeLayout-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+
+        <!--<com.hanks.htextview.evaporate.EvaporateTextView-->
+            <!--android:id="@+id/etv_smog2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="8dp"-->
+            <!--android:text="23"-->
+            <!--android:textColor="#fff"-->
+            <!--android:textSize="60sp" />-->
+        <!--<TextView-->
+            <!--android:padding="5dp"-->
+            <!--android:layout_toRightOf="@+id/etv_smog2"-->
+            <!--android:text="°C"-->
+            <!--android:textColor="#fff"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="24sp"/>-->
+        <!--<TextView-->
+            <!--android:padding="10sp"-->
+            <!--android:textSize="20sp"-->
+            <!--android:layout_below="@+id/etv_smog2"-->
+            <!--android:textColor="#fff"-->
+            <!--android:text="2019-6-2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--<ImageView-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:src="@drawable/temperature"-->
+            <!--android:scaleType="centerInside"-->
+            <!--android:layout_height="100dp" />-->
+    <!--</RelativeLayout>-->
+<!--</android.support.v7.widget.CardView>-->
+
+
+
+
+
+</LinearLayout>
