@@ -4,9 +4,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.ToolbarWidgetWrapper;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 
 
 import com.example.smarthome.Persent.MainPresenter;
@@ -25,6 +29,10 @@ import com.hanks.htextview.evaporate.EvaporateTextView;
 public class Aty_Mian  extends BaseActivity<UiInterface, MainPresenter<UiInterface>>implements UiInterface {
     EvaporateTextView etv;
     Toolbar toolbar;
+    DrawerLayout dl;
+    NavigationView nv;
+    ImageButton ibtn_menu;
+    ImageButton ibtn_setting;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,10 +44,37 @@ public class Aty_Mian  extends BaseActivity<UiInterface, MainPresenter<UiInterfa
 //        getPresenter().ReadLedState("hzy");
 //        getPresenter().ReadSmog("hzy");
 //        getPresenter().ReadTemperature("hzy");
-        etv=findViewById(R.id.etv_tem);
 
 
+        init();
+        Events();
     }
+    private void init() {
+        toolbar=findViewById(R.id.toolbar);
+        toolbar.setTitle("");
+        ibtn_menu=toolbar.findViewById(R.id.menu_show);
+        dl=findViewById(R.id.aty_main_drawerlayout);
+        nv=findViewById(R.id.aty_main_navigationView);
+        ibtn_setting=toolbar.findViewById(R.id.menu_setting);
+    }
+    private void Events() {
+
+        etv=findViewById(R.id.etv_tem);
+        ibtn_menu .setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dl.openDrawer(nv);
+            }
+        });
+        ibtn_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+    }
+
+
 
     @Override
     public MainPresenter choicePresent() {

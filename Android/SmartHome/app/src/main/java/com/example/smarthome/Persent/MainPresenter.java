@@ -55,7 +55,6 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
             }).subscribe(new Observer<Long>() {
                 @Override
                 public void onSubscribe(Disposable d) {
-
                 }
 
                 @Override
