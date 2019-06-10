@@ -28,4 +28,7 @@ public interface DataRecevice {
     @GET("SmartHome/ReadTemperature")
     Call< List<DataBean>> ReadTemperature(@Query("user")String user);
 
+    @GET("SmartHome/SetCmd")
+    Call< List<DataBean>> SetCmd(@Query("type")String user,@Query("state")String state);
+
 }

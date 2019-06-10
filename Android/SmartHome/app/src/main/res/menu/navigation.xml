@@ -2,21 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group
-        android:id="@+id/main_aty_navigation_g1"
         android:checkableBehavior="single">
         <item
 
-            android:id="@+id/main_aty_navigation_item_Myd"
-            android:title="我的idea" />
-        <item
-            android:id="@+id/main_aty_navigation_item_firenders"
-             android:title="我的好友" />
-        <item
-            android:id="@+id/main_aty_navigation_item_Mylike"
-            android:title="我的收藏" />
-    </group>
-    <group
+            android:id="@+id/btn_cmd"
+            android:title="发送指令" />
 
+        <item
+
+            android:id="@+id/btn_add"
+            android:title="添加设备" />
+
+    </group>
+
+    <group
         android:checkableBehavior="single">
         <item
 

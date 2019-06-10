@@ -43,7 +43,9 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
                                 times[i++]= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(d.getTime());
 
                             }
-                            weakReference.get().ReadCo2(values,times);
+                            if (weakReference.get() != null) {
+                                weakReference.get().ReadCo2(values, times);
+                            }
                         }
 
                         @Override
@@ -55,6 +57,7 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
             }).subscribe(new Observer<Long>() {
                 @Override
                 public void onSubscribe(Disposable d) {
+
                 }
 
                 @Override
@@ -76,7 +79,9 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
 
         }
     }
-
+    public void StopTask(){
+        DataModel.getInstance().AllTaskCancel();
+    }
     public void ReadLedState(final String user){
         if (weakReference.get() != null) {
             //获取Co2信息 Rxjava实现轮询
@@ -96,7 +101,10 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
                                         times[i++]= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(d.getTime());
 
                                     }
-                                    weakReference.get().ReadLedState(values[0],times[0]);
+                                    if (weakReference.get() != null) {
+                                        weakReference.get().ReadLedState(values[0],times[0]);
+
+                                    }
                                 }
 
                                 @Override
@@ -149,7 +157,9 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
                                         times[i++]= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(d.getTime());
 
                                     }
-                                    weakReference.get().ReadSmog(values,times);
+                                    if (weakReference.get() != null) {
+                                     weakReference.get().ReadSmog(values,times);
+                                    }
                                 }
 
                                 @Override
@@ -202,7 +212,9 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
                                         times[i++]= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(d.getTime());
 
                                     }
-                                    weakReference.get().ReadTemperature(values,times);
+                                    if (weakReference.get() != null) {
+                                        weakReference.get().ReadTemperature(values,times);
+                                    }
                                 }
 
                                 @Override
@@ -234,5 +246,19 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
             });
 
         }
+    }
+
+    public void SetCmd(String type,String state){
+        DataModel.getInstance().SetCmd(type, state, new DataCallBack() {
+            @Override
+            public void success(List<DataBean> datalist) {
+
+            }
+
+            @Override
+            public void fail(String error) {
+                Log.i("Cmd", "fail: ");
+            }
+        });
     }
 }

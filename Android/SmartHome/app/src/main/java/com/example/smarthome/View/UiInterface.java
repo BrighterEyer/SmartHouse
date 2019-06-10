@@ -12,4 +12,6 @@ public interface UiInterface {
     public void ReadSmog(int[] values,String[] times);
 
     public void ReadTemperature(int[] values,String[] times);
+
+
 }

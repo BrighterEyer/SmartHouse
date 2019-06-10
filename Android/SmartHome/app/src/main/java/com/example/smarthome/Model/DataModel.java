@@ -2,6 +2,8 @@ package com.example.smarthome.Model;
 
 import android.util.Log;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 import retrofit2.Call;
@@ -19,7 +21,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class DataModel {
     Retrofit restAdapter ;
     DataRecevice service ;
-
 
     private static volatile DataModel instance;
     private DataModel(){
@@ -43,18 +44,24 @@ public class DataModel {
             return instance;
         }
     }
+    public void AllTaskCancel(){
+
+    }
     public void ReadCo2Value(String username, final DataCallBack callBack) {
 
-        Call<List<DataBean>> query = service.ReadCo2(username);
+        final Call<List<DataBean>> query = service.ReadCo2(username);
+
         query.enqueue(new Callback<List<DataBean>>() {
             @Override
             public void onResponse(Call<List<DataBean>> call, Response<List<DataBean>> response) {
                 List<DataBean> a = response.body();
                 callBack.success(a);
+
             }
             @Override
             public void onFailure(Call<List<DataBean>> call, Throwable t) {
                 callBack.fail(t.toString());
+
             }
         });
     }
@@ -62,15 +69,18 @@ public class DataModel {
 
     public void ReadLedState(String username, final DataCallBack callBack) {
 
-        Call<List<DataBean>> query = service.ReadLedState(username);
+        final Call<List<DataBean>> query = service.ReadLedState(username);
+
         query.enqueue(new Callback<List<DataBean>>() {
             @Override
             public void onResponse(Call<List<DataBean>> call, Response<List<DataBean>> response) {
                 List<DataBean> a = response.body();
+
                 callBack.success(a);
             }
             @Override
             public void onFailure(Call<List<DataBean>> call, Throwable t) {
+
                 callBack.fail(t.toString());
             }
         });
@@ -79,33 +89,66 @@ public class DataModel {
 
     public void ReadSmog(String username, final DataCallBack callBack) {
 
-        Call<List<DataBean>> query = service.ReadSmog(username);
+        final Call<List<DataBean>> query = service.ReadSmog(username);
+
         query.enqueue(new Callback<List<DataBean>>() {
             @Override
             public void onResponse(Call<List<DataBean>> call, Response<List<DataBean>> response) {
                 List<DataBean> a = response.body();
+
                 callBack.success(a);
             }
             @Override
             public void onFailure(Call<List<DataBean>> call, Throwable t) {
+
                 callBack.fail(t.toString());
+
             }
         });
     }
 
     public void ReadTemperature(String username, final DataCallBack callBack) {
 
-        Call<List<DataBean>> query = service.ReadTemperature(username);
+        final Call<List<DataBean>> query = service.ReadTemperature(username);
+
         query.enqueue(new Callback<List<DataBean>>() {
             @Override
             public void onResponse(Call<List<DataBean>> call, Response<List<DataBean>> response) {
                 List<DataBean> a = response.body();
+
                 callBack.success(a);
             }
             @Override
             public void onFailure(Call<List<DataBean>> call, Throwable t) {
+
                 callBack.fail(t.toString());
             }
         });
     }
+
+
+    /***
+     * 上传命令
+     * @param type
+     * @param state
+     * @param callBack
+     */
+    public void SetCmd(String type,String state, final DataCallBack callBack) {
+
+        final Call<List<DataBean>> query = service.SetCmd(type,state);
+
+        query.enqueue(new Callback<List<DataBean>>() {
+            @Override
+            public void onResponse(Call<List<DataBean>> call, Response<List<DataBean>> response) {
+
+            }
+            @Override
+            public void onFailure(Call<List<DataBean>> call, Throwable t) {
+
+                callBack.fail(t.toString());
+            }
+        });
+    }
+
+
 }
