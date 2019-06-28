@@ -152,7 +152,7 @@
                 <TextView
                     android:padding="5dp"
                     android:layout_toRightOf="@+id/etv_smog"
-                    android:text="°C"
+                    android:text="%"
                     android:textColor="#fff"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

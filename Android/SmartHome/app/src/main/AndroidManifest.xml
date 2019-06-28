@@ -23,6 +23,18 @@
         <activity android:name=".Ui.Activity.Aty_Setting">
 
         </activity>
+        <activity android:name=".Ui.Activity.Aty_ShowTemData"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        </activity>
+        <activity android:name=".Ui.Activity.Aty_ShowSmogData"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        </activity>
+        <activity android:name=".Ui.Activity.Aty_ShowWetData"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>

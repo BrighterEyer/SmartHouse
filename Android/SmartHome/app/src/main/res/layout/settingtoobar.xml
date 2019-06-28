@@ -4,7 +4,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
 android:layout_height="wrap_content"
 xmlns:app="http://schemas.android.com/apk/res-auto"
-android:background="#4B4E53"
+android:background="#ACA5A5"
 android:gravity="center_horizontal"
 android:id="@+id/toolbar">
 <ImageButton
@@ -12,8 +12,8 @@ android:id="@+id/toolbar">
     android:background="@android:drawable/ic_menu_revert"
     android:scaleType="centerInside"
     android:layout_margin="10dp"
-    android:layout_width="40dp"
-    android:layout_height="40dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     />
 <TextView
     android:textColor="#B5FFFFFF"

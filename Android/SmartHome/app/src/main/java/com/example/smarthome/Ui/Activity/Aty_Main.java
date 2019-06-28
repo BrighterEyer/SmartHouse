@@ -2,7 +2,6 @@ package com.example.smarthome.Ui.Activity;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -125,18 +124,23 @@ public class Aty_Main extends BaseActivity<UiInterface, MainPresenter<UiInterfac
             @Override
             public void onClick(View view) {
                 Log.i("Main", "onClick: somg");
+                startActivity(new Intent(Aty_Main.this, Aty_ShowSmogData.class));
             }
         });
         mwet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i("Main", "onClick: wet");
+                startActivity(new Intent(Aty_Main.this, Aty_ShowWetData.class));
+
             }
         });
         mtem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i("Main", "onClick: mtem");
+                startActivity(new Intent(Aty_Main.this, Aty_ShowTemData.class));
+
             }
         });
 

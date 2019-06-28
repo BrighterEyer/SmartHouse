@@ -6,12 +6,8 @@ package com.example.smarthome.View;
 
 public interface UiInterface {
     public void ReadCo2(int[] values,String[] times);
-
     public void ReadLedState(int i,String times);
-
     public void ReadSmog(int[] values,String[] times);
-
     public void ReadTemperature(int[] values,String[] times);
-
 
 }

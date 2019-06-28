@@ -28,7 +28,7 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
         if (weakReference.get() != null) {
             //获取Co2信息 Rxjava实现轮询
             //15秒访问一次
-            Observable.interval(3,15, TimeUnit.SECONDS)
+            Observable.interval(3,5, TimeUnit.SECONDS)
                     .doOnNext(new Consumer<Long>() {
                 @Override
                 public void accept(Long aLong) throws Exception {
@@ -40,7 +40,7 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
                             String[] times=new String[datalist.size()];
                             for (DataBean d:datalist){
                                 values[i]=d.getValue();
-                                times[i++]= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(d.getTime());
+                                times[i++]= new SimpleDateFormat("MM-dd HH:mm").format(d.getTime());
 
                             }
                             if (weakReference.get() != null) {
@@ -142,7 +142,7 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
         if (weakReference.get() != null) {
             //获取Co2信息 Rxjava实现轮询
             //15秒访问一次
-            Observable.interval(3,15, TimeUnit.SECONDS)
+            Observable.interval(3,5, TimeUnit.SECONDS)
                     .doOnNext(new Consumer<Long>() {
                         @Override
                         public void accept(Long aLong) throws Exception {
@@ -154,7 +154,7 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
                                     String[] times=new String[datalist.size()];
                                     for (DataBean d:datalist){
                                         values[i]=d.getValue();
-                                        times[i++]= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(d.getTime());
+                                        times[i++]= new SimpleDateFormat("MM-dd HH:mm").format(d.getTime());
 
                                     }
                                     if (weakReference.get() != null) {
@@ -197,7 +197,7 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
         if (weakReference.get() != null) {
             //获取Co2信息 Rxjava实现轮询
             //15秒访问一次
-            Observable.interval(3,15, TimeUnit.SECONDS)
+            Observable.interval(3,5, TimeUnit.SECONDS)
                     .doOnNext(new Consumer<Long>() {
                         @Override
                         public void accept(Long aLong) throws Exception {
@@ -209,7 +209,7 @@ public  class MainPresenter<V extends UiInterface>extends BasePresenter<V>{
                                     String[] times=new String[datalist.size()];
                                     for (DataBean d:datalist){
                                         values[i]=d.getValue();
-                                        times[i++]= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(d.getTime());
+                                        times[i++]= new SimpleDateFormat("MM-dd HH:mm").format(d.getTime());
 
                                     }
                                     if (weakReference.get() != null) {
